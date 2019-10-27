@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Draggable } from 'react-smooth-dnd';
 import { applyDrag, generateItems } from '../lib/utils';
-import Point from './point';
+import Point from '../Components/point/point';
 const groupStyle = {
 	marginLeft: '50px',
 	flex: 1

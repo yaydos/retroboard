@@ -26,6 +26,8 @@ class Point extends React.Component<PointProps, PointStates> {
 		this.state = {
 			formMode: FormMode.READONLY,
 		};
+
+		this.onEditClick = this.onEditClick.bind(this);
 	}
 
 	render() {
@@ -35,10 +37,10 @@ class Point extends React.Component<PointProps, PointStates> {
 				return (
 					<div className={styles.point} style={{backgroundColor: this.props.color || 'beige'}}>
 						<p className={styles.readonlyParagraph}>yasemin cok calistri</p>
-						<FontAwesomeIcon icon={faPencilAlt} className={styles.icons} />
+						<FontAwesomeIcon icon={faPencilAlt}  className={styles.icons} onClick={this.onEditClick}/>
 						<div className={styles.iconBar}>
-							<FontAwesomeIcon icon={faThumbsUp}/>
-							<FontAwesomeIcon icon={faTrashAlt}/>
+							<FontAwesomeIcon icon={faThumbsUp} onClick={this.onLikeClick}/>
+							<FontAwesomeIcon icon={faTrashAlt} onClick={this.onDeleteClick}/>
 						</div>
 					</div>
 				);
@@ -64,6 +66,16 @@ class Point extends React.Component<PointProps, PointStates> {
 					</div>
 				);
 		}
+	}
+	private onEditClick(): void {
+		this.setState({ formMode: FormMode.EDIT });
+	};
+
+	private onDeleteClick(): void {
+		this.setState({ formMode: FormMode.DELETE });
+	}
+
+	private onLikeClick(): void {
 	}
 }
 
