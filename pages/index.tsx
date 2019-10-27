@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Draggable } from 'react-smooth-dnd';
-import { applyDrag, generateItems } from './utils';
+import { applyDrag, generateItems } from '../lib/utils';
 import Point from './point';
 const groupStyle = {
 	marginLeft: '50px',
@@ -37,7 +37,7 @@ class Home extends Component<Props, State> {
 								return (
 									<Draggable key={p.id}>
 										<div className="draggable-item">
-											<Point></Point>											
+											<Point color='blue'></Point>											
 										</div>
 									</Draggable>
 								);
@@ -52,7 +52,7 @@ class Home extends Component<Props, State> {
 								return (
 									<Draggable key={p.id}>
 										<div className="draggable-item">
-											<Point></Point>											
+											<Point color='pink'></Point>											
 										</div>
 									</Draggable>
 								);
@@ -67,7 +67,7 @@ class Home extends Component<Props, State> {
 								return (
 									<Draggable key={p.id}>
 										<div className="draggable-item">
-											<Point></Point>
+											<Point color='purple'></Point>
 										</div>
 									</Draggable>
 								);
