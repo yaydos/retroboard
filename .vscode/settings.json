@@ -1,0 +1,8 @@
+{
+	"appService.zipIgnorePattern": [
+		"node_modules{,/**}",
+		".vscode{,/**}"
+	],
+	"appService.deploySubpath": "",
+	"appService.defaultWebAppToDeploy": "/subscriptions/f8a892e5-b0b8-4f8c-85cb-073f18ca88f5/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/kutluapp"
+}
